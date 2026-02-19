@@ -1,0 +1,4 @@
+¿Qué diferencia observas entre un nodo y una escena?
+¿Por qué es importante la jerarquía de nodos (qué hijo depende de qué padre)?
+¿Cómo se relaciona el Inspector con el Viewport?
+¿Qué ventajas tiene crear escenas reutilizables (como el planeta)?
