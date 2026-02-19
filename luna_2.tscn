@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://td1ubstope7o"]
+
+[ext_resource type="Script" uid="uid://b5modgo2su7i6" path="res://luna_2.gd" id="1_8a5co"]
+[ext_resource type="Texture2D" uid="uid://c1lmkggs00prx" path="res://assets/planetas/Luna 1.png" id="1_f43ij"]
+
+[node name="Luna 2" type="Node2D" unique_id=1177917389]
+script = ExtResource("1_8a5co")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=542534897]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_f43ij")
+
+[node name="Timer" type="Timer" parent="." unique_id=840962286]
+autostart = true

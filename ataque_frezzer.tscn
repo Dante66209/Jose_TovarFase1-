@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dwkgbv55s8gk0"]
+
+[ext_resource type="Script" uid="uid://dsrjv1odxdsog" path="res://ataque_frezzer.gd" id="1_efw85"]
+[ext_resource type="Texture2D" uid="uid://by3wgq3kbrj00" path="res://assets/planetas/ataque frezzer.png" id="2_p5cy6"]
+
+[node name="ataque frezzer" type="Node2D" unique_id=2113472614]
+script = ExtResource("1_efw85")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=443762131]
+texture = ExtResource("2_p5cy6")
+
+[node name="Timer" type="Timer" parent="." unique_id=347815887]
+autostart = true

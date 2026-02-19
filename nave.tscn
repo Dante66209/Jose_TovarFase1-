@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cwwyxn571fd7w"]
+
+[ext_resource type="Texture2D" uid="uid://dqg78jqklw5ig" path="res://assets/planetas/nave.png" id="1_ltewx"]
+
+[node name="Nave" type="Node2D" unique_id=1852694449]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864041716]
+texture = ExtResource("1_ltewx")
+
+[node name="Timer" type="Timer" parent="." unique_id=2093217451]
+autostart = true

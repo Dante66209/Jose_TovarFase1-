@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c7emb3gyuxenk"]
+
+[ext_resource type="Script" uid="uid://b7hwstq1edxuo" path="res://planeta_vellita.gd" id="1_fx14l"]
+[ext_resource type="Texture2D" uid="uid://bpor71ouopprg" path="res://assets/planetas/planeta.png" id="2_xrxon"]
+
+[node name="Planeta Vellita" type="Node2D" unique_id=1447709941]
+script = ExtResource("1_fx14l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=601033611]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xrxon")
+
+[node name="Timer" type="Timer" parent="." unique_id=424294120]
+autostart = true

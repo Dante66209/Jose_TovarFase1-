@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://u31q06aqnpyl"]
+
+[ext_resource type="Script" uid="uid://vrxgk8bmvpgj" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://ctrdti6lfdo63" path="res://orbita_1.gd" id="2_272bh"]
+[ext_resource type="PackedScene" uid="uid://td1ubstope7o" path="res://luna_2.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bxuhqwju4qcyi" path="res://assets/Fondo espacio.png" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dx1vwn73bk7hq" path="res://luna_1.tscn" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://bt2isimqc65hd" path="res://orbita_2.gd" id="4_5vw27"]
+[ext_resource type="PackedScene" uid="uid://c7emb3gyuxenk" path="res://planeta_vellita.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dwkgbv55s8gk0" path="res://ataque_frezzer.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://cwwyxn571fd7w" path="res://nave.tscn" id="7_4c57u"]
+[ext_resource type="Texture2D" uid="uid://bnd0no3a27txk" path="res://assets/planetas/freezer2.png" id="8_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dfiulibptocli" path="res://assets/planetas/Bardock.png" id="9_dg77c"]
+[ext_resource type="AudioStream" uid="uid://opkjle3og0ev" path="res://assets/planetas/audio.ogg" id="11_efxa6"]
+
+[node name="Main" type="Node2D" unique_id=1503897611]
+script = ExtResource("1_h2yge")
+
+[node name="Planetas" type="Node2D" parent="." unique_id=2028534855]
+
+[node name="Orbita1" type="Node2D" parent="Planetas" unique_id=455230515]
+script = ExtResource("2_272bh")
+
+[node name="Luna 1" parent="Planetas/Orbita1" unique_id=1589190388 instance=ExtResource("3_lquwl")]
+position = Vector2(-235.00002, 126)
+scale = Vector2(0.6, 0.6)
+
+[node name="Orbita2" type="Node2D" parent="Planetas" unique_id=697027452]
+script = ExtResource("4_5vw27")
+
+[node name="Luna 2" parent="Planetas/Orbita2" unique_id=1177917389 instance=ExtResource("2_h2yge")]
+position = Vector2(199, -20)
+scale = Vector2(0.8, 0.8)
+
+[node name="ataque frezzer" parent="Planetas" unique_id=2113472614 instance=ExtResource("6_kek77")]
+position = Vector2(401, -100)
+scale = Vector2(0.42000002, 0.39470944)
+
+[node name="Nave" parent="Planetas" unique_id=1852694449 instance=ExtResource("7_4c57u")]
+position = Vector2(491.00003, 28.000008)
+rotation = 0.44847623
+scale = Vector2(0.5225219, 0.4871078)
+
+[node name="Freezer" type="Sprite2D" parent="Planetas" unique_id=1154165413]
+show_behind_parent = true
+position = Vector2(425.00003, -12.000008)
+rotation = -0.12950343
+scale = Vector2(0.3641753, 0.37900174)
+texture = ExtResource("8_efxa6")
+
+[node name="Bardock" type="Sprite2D" parent="Planetas/Freezer" unique_id=201644226]
+z_index = 10
+position = Vector2(-841.4634, 99.58223)
+rotation = 0.070562415
+scale = Vector2(0.38743526, 0.38781312)
+texture = ExtResource("9_dg77c")
+
+[node name="Planeta Vellita" parent="Planetas" unique_id=1447709941 instance=ExtResource("4_lquwl")]
+scale = Vector2(1.5, 1.5)
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1016949719]
+z_index = -10
+scale = Vector2(3, 3)
+texture = ExtResource("3_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=231526167]
+stream = ExtResource("11_efxa6")
+autoplay = true
